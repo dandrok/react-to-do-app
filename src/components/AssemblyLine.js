@@ -40,23 +40,24 @@ const AssemblyLine = ({ stages }) => {
         </form>
       </div>
 
-      <div className={styles.table}>
-        {stages.map((title) => {
-          return <div key={title}>{title}</div>
-        })}
-      </div>
+      <section>
+        <div className={styles.table}>
+          {stages.map((title) => {
+            return <div key={title}>{title}</div>
+          })}
+        </div>
 
-      {tasks.map((tasks) => {
-        return (
-          <p
-            onClick={() => deleteHandler(tasks.id)}
-            key={tasks.id}
-            className={styles.tasks_box}
-          >
-            {tasks.task}
-          </p>
-        )
-      })}
+        {tasks.map((tasks) => {
+          return (
+            <div className={styles.task_}>
+              <button onClick={() => deleteHandler(tasks.id)}>-</button>
+              <div key={tasks.id} className={styles.tasks_box}>
+                {tasks.task}
+              </div>
+            </div>
+          )
+        })}
+      </section>
     </>
   )
 }

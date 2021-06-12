@@ -12,10 +12,14 @@
   font-weight: 500;
 }
 
-.tasks_box {
-  margin: 1rem;
+.task_ {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  gap: 0.5rem;
   border: solid black 1px;
-  width: 8rem;
+  width: 9rem;
   height: auto;
   cursor: pointer;
+  border-radius: 4px;
 }
