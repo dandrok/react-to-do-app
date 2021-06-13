@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 const AssemblyLine = ({ stages }) => {
   const [task, setTask] = useState('')
-
   const [tasks, setTasks] = useState([])
 
   const handleSubmit = (e) => {
@@ -15,7 +14,6 @@ const AssemblyLine = ({ stages }) => {
 
   const deleteHandler = (id) => {
     const newList = tasks.filter((tasks) => tasks.id !== id)
-
     setTasks(newList)
   }
 
